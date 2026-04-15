@@ -12,15 +12,6 @@ struct ContentView: View {
             .foregroundStyle(.red)
             .multilineTextAlignment(.center)
         
-        Button("Add") {
-            answer = number1 + number2
-        }
-        
-        Button("Multiply") {
-            answer = number1 * number2
-        }
-        TextField("enter a number", value: $number2, format: .number)
-        
         VStack{
             Button("Add") {
                 answer = number1 + number2
