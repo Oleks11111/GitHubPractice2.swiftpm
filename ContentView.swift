@@ -19,10 +19,24 @@ struct ContentView: View {
         Button("Multiply") {
             answer = number1 * number2
         }
+        TextField("enter a number", value: $number2, format: .number)
         
-        Button("Subtract") {
-            answer = number1 - number2
+        VStack{
+            Button("Add") {
+                answer = number1 + number2
+            }
+            
+            Button("Multiply") {
+                answer = number1 * number2
+            }
+            
+            Button("Subtract") {
+                answer = number1 - number2
+            }
         }
+        .foregroundStyle(Color.blue)
+        .bold()
+        
         Text("Answer: \(answer)")
         
         
