@@ -8,17 +8,22 @@ struct ContentView: View {
         TextField("Enter a number", value: $number1, format: .number)
         TextField("enter a number", value: $number2, format: .number)
         
-        Button("Add") {
-            answer = number1 + number2
+        VStack{
+            Button("Add") {
+                answer = number1 + number2
+            }
+            
+            Button("Multiply") {
+                answer = number1 * number2
+            }
+            
+            Button("Subtract") {
+                answer = number1 - number2
+            }
         }
+        .foregroundStyle(Color.blue)
+        .bold()
         
-        Button("Multiply") {
-            answer = number1 * number2
-        }
         Text("Answer: \(answer)")
-        
-        Button("Subtract") {
-            answer = number1 - number2
-        }
     }
 }
